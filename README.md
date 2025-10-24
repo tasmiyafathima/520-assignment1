@@ -34,7 +34,7 @@ Experiment Workflow:-
 
   3.Targeted Refinement
     Two common problems failed across both LLM families and both prompting strategies (CoT and Self-Debugging):
-    is_balanced_parentheses
+    is_balanced_parentheses and 
     matrix_rotate_9
     
     To address these, their prompts were enhanced in refined_prompt_dataset.json.
