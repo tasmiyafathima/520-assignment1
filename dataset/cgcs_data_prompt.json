@@ -1,0 +1,52 @@
+[
+  {
+    "id": "reverse_words_in_sentence",
+    "prompt": "def reverse_words_in_sentence(s: str) -> str:\n    \"\"\"Constraint-Guided Task:\n    Goal: Reverse the order of words in a sentence while preserving each word's internal letters.\n    Constraints:\n    1. Treat consecutive spaces as a single delimiter.\n    2. Ignore leading/trailing spaces in the final result.\n    3. Empty input must return an empty string.\n    Example: '  one   two three ' -> 'three two one'.\"\"\"",
+    "tests": "assert reverse_words_in_sentence('hello world') == 'world hello'\nassert reverse_words_in_sentence('  one   two three ') == 'three two one'\nassert reverse_words_in_sentence('') == ''"
+  },
+  {
+    "id": "factorial_memoized",
+    "prompt": "def factorial_memoized(n: int, memo: dict = None) -> int:\n    \"\"\"Constraint-Guided Task:\n    Goal: Compute factorial of n efficiently using memoization.\n    Constraints:\n    1. n must be a non-negative integer.\n    2. Use the memo dictionary to store intermediate results.\n    3. factorial(0) = 1 and factorial(1) = 1.\n    4. Avoid recomputation by checking memo before recursion.\"\"\"",
+    "tests": "assert factorial_memoized(5) == 120\nassert factorial_memoized(0) == 1\nassert factorial_memoized(7) == 5040"
+  },
+  {
+    "id": "is_balanced_parentheses",
+    "prompt": "def is_balanced_parentheses(s: str) -> bool:\n    \"\"\"Constraint-Guided Task:\n    Goal: Determine whether parentheses in the input string are properly nested and balanced.\n    Constraints:\n    1. Only '(' and ')' characters are considered.\n    2. Every opening '(' must have a matching closing ')'.\n    3. The sequence must never have more ')' than '(' at any prefix.\n    4. Return True for balanced, False otherwise.\"\"\"",
+    "tests": "assert is_balanced_parentheses('()')\nassert is_balanced_parentheses('(())()')\nassert not is_balanced_parentheses('(()')\nassert not is_balanced_parentheses('())(')"
+  },
+  {
+    "id": "merge_sorted_lists",
+    "prompt": "def merge_sorted_lists(a: list[int], b: list[int]) -> list[int]:\n    \"\"\"Constraint-Guided Task:\n    Goal: Merge two sorted integer lists into a single sorted list.\n    Constraints:\n    1. Preserve ascending order.\n    2. Both input lists are independently sorted.\n    3. The merged result must not use sort() directly — merge logically.\n    4. Handle empty list inputs gracefully.\"\"\"",
+    "tests": "assert merge_sorted_lists([1,3,5],[2,4,6]) == [1,2,3,4,5,6]\nassert merge_sorted_lists([], [1,2]) == [1,2]\nassert merge_sorted_lists([], []) == []"
+  },
+  {
+    "id": "longest_unique_substring_length",
+    "prompt": "def longest_unique_substring_length(s: str) -> int:\n    \"\"\"Constraint-Guided Task:\n    Goal: Find the length of the longest substring with all unique characters.\n    Constraints:\n    1. The substring must consist of contiguous characters.\n    2. Handle edge cases — empty string and all-repeating characters.\n    3. Optimize by using a sliding window or similar strategy to avoid O(n^2) complexity.\n    4. Return 0 for empty string input.\"\"\"",
+    "tests": "assert longest_unique_substring_length('abcabcbb') == 3\nassert longest_unique_substring_length('bbbbb') == 1\nassert longest_unique_substring_length('pwwkew') == 3\nassert longest_unique_substring_length('') == 0"
+  },
+  {
+    "id": "binary_search",
+    "prompt": "def binary_search(arr: list[int], target: int) -> int:\n    \"\"\"Constraint-Guided Task:\n    Goal: Locate the index of the target element in a sorted list using binary search.\n    Constraints:\n    1. The array must be sorted in ascending order.\n    2. Return -1 if target is not found.\n    3. Use O(log n) approach — avoid linear scanning.\n    4. Midpoint should be updated based on comparison with target.\"\"\"",
+    "tests": "assert binary_search([1,2,3,4,5], 3) == 2\nassert binary_search([1,2,3,4,5], 6) == -1\nassert binary_search([], 3) == -1"
+  },
+  {
+    "id": "two_sum",
+    "prompt": "def two_sum(nums: list[int], target: int) -> list[int]:\n    \"\"\"Constraint-Guided Task:\n    Goal: Identify indices of two distinct numbers in nums that sum to target.\n    Constraints:\n    1. Each input has exactly one valid solution.\n    2. Indices returned can be in any order.\n    3. Avoid nested loops; use hashing for O(n) efficiency.\n    4. Handle duplicate values correctly (e.g., [3,3], target=6).\"\"\"",
+    "tests": "assert set(two_sum([2,7,11,15], 9)) == {0,1}\nassert set(two_sum([3,2,4], 6)) == {1,2}\nassert set(two_sum([3,3], 6)) == {0,1}"
+  },
+  {
+    "id": "word_frequency_counter",
+    "prompt": "def word_frequency_counter(s: str) -> dict:\n    \"\"\"Constraint-Guided Task:\n    Goal: Compute the frequency of each distinct word in a string (case-insensitive).\n    Constraints:\n    1. Treat words as separated by whitespace.\n    2. Normalize all words to lowercase before counting.\n    3. Return a dictionary where keys are words and values are counts.\n    4. Ignore punctuation and handle repeated spacing robustly.\"\"\"",
+    "tests": "assert word_frequency_counter('This is this') == {'this':2, 'is':1}"
+  },
+  {
+    "id": "matrix_rotate_90",
+    "prompt": "def matrix_rotate_90(matrix: list[list[int]]) -> list[list[int]]:\n    \"\"\"Constraint-Guided Task:\n    Goal: Rotate a square matrix 90 degrees clockwise.\n    Constraints:\n    1. Assume the matrix is n x n.\n    2. The transformation must not alter the original matrix structure.\n    3. Use index manipulation instead of high-level rotation functions.\n    4. Return a new matrix with rotated elements.\"\"\"",
+    "tests": "assert matrix_rotate_90([[1,2],[3,4]]) == [[3,1],[4,2]]\nassert matrix_rotate_90([[1]]) == [[1]]"
+  },
+  {
+    "id": "count_anagrams",
+    "prompt": "def count_anagrams(words: list[str]) -> dict:\n    \"\"\"Constraint-Guided Task:\n    Goal: Group words that are anagrams and count how many belong to each group.\n    Constraints:\n    1. Two words belong to the same group if their sorted letters match.\n    2. Represent each group by a tuple of sorted characters.\n    3. Return a dictionary mapping each key tuple to its count.\n    4. Ignore case sensitivity in comparison.\"\"\"",
+    "tests": "assert count_anagrams(['eat','tea','tan','ate','nat','bat']) == {('a','e','t'):3, ('a','n','t'):2, ('a','b','t'):1}"
+  }
+]

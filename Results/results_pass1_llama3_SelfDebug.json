@@ -1,0 +1,45 @@
+{
+  "pass@1": 70.0,
+  "details": {
+    "reverse_words_in_sentence": {
+      "passed": true,
+      "file": "outputs/llama3_SelfDebug/reverse_words_in_sentence.py"
+    },
+    "factorial_memoized": {
+      "passed": true,
+      "file": "outputs/llama3_SelfDebug/factorial_memoized.py"
+    },
+    "is_balanced_parentheses": {
+      "passed": false,
+      "file": "outputs/llama3_SelfDebug/is_balanced_parentheses.py"
+    },
+    "merge_sorted_lists": {
+      "passed": true,
+      "file": "outputs/llama3_SelfDebug/merge_sorted_lists.py"
+    },
+    "longest_unique_substring_length": {
+      "passed": true,
+      "file": "outputs/llama3_SelfDebug/longest_unique_substring_length.py"
+    },
+    "binary_search": {
+      "passed": true,
+      "file": "outputs/llama3_SelfDebug/binary_search.py"
+    },
+    "two_sum": {
+      "passed": true,
+      "file": "outputs/llama3_SelfDebug/two_sum.py"
+    },
+    "word_frequency_counter": {
+      "passed": true,
+      "file": "outputs/llama3_SelfDebug/word_frequency_counter.py"
+    },
+    "matrix_rotate_90": {
+      "passed": false,
+      "file": "outputs/llama3_SelfDebug/matrix_rotate_90.py"
+    },
+    "count_anagrams": {
+      "passed": false,
+      "file": "outputs/llama3_SelfDebug/count_anagrams.py"
+    }
+  }
+}
