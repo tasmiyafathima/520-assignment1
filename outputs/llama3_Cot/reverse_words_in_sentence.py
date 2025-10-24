@@ -1,0 +1,4 @@
+def reverse_words_in_sentence(s: str) -> str:
+    """Reverse the order of words in a sentence, but not the words themselves."""
+    words = s.split()
+    return ' '.join(words[::-1])

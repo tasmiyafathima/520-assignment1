@@ -1,0 +1,12 @@
+
+def is_balanced_parentheses(s: str) -> bool:
+    """Check if all parentheses are balanced and properly closed."""
+    balance = 0
+    for ch in s:
+        if ch == '(':
+            balance += 1
+        elif ch == ')':
+            balance -= 1
+            if balance < 0:
+                return False
+    return True

@@ -1,0 +1,14 @@
+def factorial_memoized(n: int, memo: dict = None) -> int:
+    if memo is None:
+        memo = {}
+        
+    if n in memo:
+        return memo[n]
+        
+    if n == 0:
+        return 1
+        
+    result = n * factorial_memoized(n - 1, memo)
+    memo[n] = result
+    
+    return result
