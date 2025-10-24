@@ -1,8 +1,0 @@
-def count_anagrams(words: list[str]) -> dict:
-    """Group words that are anagrams and return their counts."""
-    from collections import defaultdict
-    groups = defaultdict(int)
-    for word in words:
-        key = tuple(sorted(word))
-        groups[key] += 1
-    return dict(groups)
