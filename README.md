@@ -18,7 +18,7 @@ Experiment Workflow:-
 
   1. Initial Code Generation
       Scripts used:
-      generate_deepseek_initial.py
+      generate_deepseek_initial.py and 
       generate_llama_initial.py
 
       Output location:
@@ -26,7 +26,7 @@ Experiment Workflow:-
 
   2. Initial Testing
       Scripts used:
-      initial_deepseek_test.py
+      initial_deepseek_test.py and 
       initial_llama_test.py
 
      Evaluation metric: pass@1
